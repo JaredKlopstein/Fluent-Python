@@ -1,3 +1,4 @@
+# list of data with tuples inside
 metro_areas = [
 ('Tokyo', 'JP', 36.933, (35.689722, 139.691667)),
 ('Delhi NCR', 'IN', 21.935, (28.613889, 77.208889)),
@@ -6,11 +7,13 @@ metro_areas = [
 ('São Paulo', 'BR', 19.649, (-23.547778, -46.635833)),
 ]
 
+# function to ouput  in formatted way
 def main():
     print(f'{"":15} | {"latitude":>9} | {"longitude":>9}')
     for name, _, _, (lat, lon) in metro_areas:
         if lon <= 0:
             print(f'{name:15} | {lat:9.4f} | {lon:9.4f}')
 
+# used to run file
 if __name__ == '__main__':
     main()
